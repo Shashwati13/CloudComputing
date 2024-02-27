@@ -1,0 +1,11 @@
+FROM python:3.9
+
+WORKDIR /app
+
+VOLUME /serverdata
+
+COPY server.py /app/server.py
+
+RUN pip install Flask
+
+CMD ["python", "server.py", "8080"]
